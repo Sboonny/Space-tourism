@@ -1,5 +1,5 @@
 #index.html ToDo
-1- hold content in the middle of the page
-2- wrap content in flex or grid
-3- change gap without modify the utility class
-4- use sr.only on a div to check what happens
+1- hold content in the middle of the page [done]
+2- wrap content in flex or grid [done]
+3- change gap without modify the utility class [done]
+4- use sr.only on a div to check what happens [done]
