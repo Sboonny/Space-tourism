@@ -1,6 +1,8 @@
-#index.html ToDo
 challenge#1 [completed]
 1- hold content in the middle of the page [done]
 2- wrap content in flex or grid [done]
 3- change gap without modify the utility class [done]
 4- use sr.only on a div to check what happens [done]
+
+Challenge#2 [completed]
+-create 6 classes with custom variables as colors utility classes

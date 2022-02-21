@@ -1,9 +1,11 @@
 /* ------------------------------- */
-/* costum variables */
+/* Custom Variables */
 /* ------------------------------- */
 
 :root {
-  --gap: .5em;
+  --clr-dark: 230 35% 7%;
+  --clr-light: 231 77% 90%;
+  --clr-white: 0 0% 100%; 
 }
 
 /* ------------------------------- */
@@ -115,6 +117,24 @@ select {
 /* ---------------------------- */
 /* page content */
 /* ---------------------------- */
-.box {
-  text-align: center;
+/* general */
+
+/* colors */
+.bg.light {
+  background-color: hsl( var(--clr-light) )
+}
+.bg-white {
+  background-color: hsl( var(--clr-white) )
+}
+.bg-dark {
+  background-color: hsl( var(--clr-dark) )
+}
+.fc-light {
+  color: hsl( var(--clr-light) )
+}
+.fc-white {
+  color: hsl( var(--clr-white) )
+}
+.fc-dark {
+  color: hsl( var(--clr-dark) )
 }
