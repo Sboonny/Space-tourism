@@ -64,8 +64,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 I learned about **Utility classes** and how to useful they are
 
+you can change a value using style in html
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="box" styles="--gap: 5rem;">
 ```
 ```css
 .proud-of-this-css {
