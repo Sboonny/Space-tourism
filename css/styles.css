@@ -25,10 +25,10 @@ dd {
   margin: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+/* Remove list styless on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
-  list-style: none;
+  list-styles: none;
 }
 
 /* Set core root defaults */
@@ -42,7 +42,7 @@ body {
   line-height: 1.5;
 }
 
-/* A elements that don't have a class get default styles */
+/* A elements that don't have a class get default styless */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -76,3 +76,39 @@ select {
 /* ---------------------------- */
 /* utlity classes */
 /* ---------------------------- */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: var(--max-width, 80rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 ,0 ,0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------------------------- */
+/* page content */
+/* ---------------------------- */
+.box {
+  margin-right: auto;
+  width: 100vw;
+  background-color: red;
+}
