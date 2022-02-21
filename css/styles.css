@@ -17,11 +17,12 @@
   --fs-400: 1.125rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
-
+  --fw-bold: 600;
   /* font-family */
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Balrow Condensed", sans-serif;
   --ff-sans-normal: "Balrow", sans-serif;
+  --light-opacity: 90%;
 }
 
 /* ------------------------------- */
@@ -222,16 +223,26 @@ select {
   line-height: 1.1;
 }
 
+.bold {
+  font-weight: var(--fw-bold, 600)
+}
+
 /* ---------------------------- */
 /* page content */
 /* ---------------------------- */
 /* general */
+
 .border {
   background-color: hsl(var(--clr-dark));
   padding: 3rem 1rem 1rem;
   border: 1px solid white;
 }
+
 .border span,
 .border a {
   color: hsl(var(--clr-light));
+}
+
+.light-opacity {
+  opacity: var(--light-opacity)
 }
