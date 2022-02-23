@@ -9,7 +9,7 @@
   --clr-white: 0 0% 100%;
 
   /* font-size */
-  --fs-900: 9.375rem;
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
   --fs-800: 6.25rem;
   --fs-700: 3.5rem;
   --fs-600: 2rem;
@@ -25,6 +25,24 @@
   --light-opacity: 90%;
 }
 
+@media (min-width: 35em) {
+  :root {
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-400: 1rem;
+  }
+}
+
+@media (min-width: 45em) {
+  :root {
+    /* font-sizes */
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-400: 1.125rem;
+  }
+}
 /* ------------------------------- */
 /* Reset */
 /* ------------------------------- */
@@ -80,6 +98,9 @@ body {
   line-height: 1.5;
   background-color: hsl(var(--clr-dark));
   color: hsl(var(--clr-light));
+
+  display: grid;
+  grid-template-rows: min-content 1fr;
 }
 
 /* A elements that don't have a class get default styless */
@@ -121,9 +142,14 @@ select {
   display: flex;
   gap: var(--gap, 1rem);
 }
+
 .grid {
   display: grid;
   gap: var(--gap, 1rem);
+}
+
+.d-block {
+  display: block;
 }
 
 .flow > *:where(:not(:first:child)) {
@@ -134,12 +160,6 @@ select {
 .container {
   padding-inline: 2em;
   margin-inline: auto;
-  max-width: var(--max-width, 80rem);
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 2em repeat(2, minmax(0, 40rem)) 2em;
   max-width: var(--max-width, 80rem);
 }
 
@@ -237,7 +257,9 @@ select {
   font-weight: var(--fw-bold, 600);
 }
 
-.uppercase { text-transform: uppercase; }
+.uppercase {
+  text-transform: uppercase;
+}
 
 /* ---------------------------- */
 /* page components */
@@ -294,7 +316,7 @@ select {
 
 .primary-navigation a > span {
   font-weight: 800;
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 
 .underline-indicators > * {
@@ -320,10 +342,10 @@ select {
 }
 
 /* nav-bar */
-#nav-holder {
+/* #nav-holder {
   justify-content: flex-end;
 
-}
+} */
 
 .nav-indicators {
   background-color: hsl(var(--clr-light) / 0.2);
@@ -339,7 +361,6 @@ select {
   padding: var(--nav-gap, 1rem) 0;
   border: 0;
   border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
-  
 }
 
 .nav-indicators > *:hover,
@@ -351,4 +372,24 @@ select {
 .nav-indicators > [aria-selected="true"] {
   color: hsl(var(--clr-white) / 1);
   border-color: hsl(var(--clr-white) / 1);
+}
+
+.grid-container {
+  display: grid;
+}
+
+@media only screen and (min-width: 45em) {
+  .grid-container {
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(
+        2rem,
+        1fr
+      );
+  }
+  .grid-container > *:first-child {
+    grid-column: 2;
+  }
+  .grid-container > *:last-child {
+    grid-column: 3;
+  }
 }
