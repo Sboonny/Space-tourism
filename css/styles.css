@@ -262,7 +262,7 @@ select {
 }
 
 /* ---------------------------- */
-/* page components */
+/* page content components */
 /* ---------------------------- */
 
 .light-opacity {
@@ -271,7 +271,7 @@ select {
 
 .large-button {
   display: inline-grid;
-  padding: 0 2rem;
+  padding: 4rem;
   cursor: point;
   /* shadow should have the same color as background */
   aspect-ratio: 1;
@@ -376,6 +376,13 @@ select {
 
 .grid-container {
   display: grid;
+  text-align: center;
+  place-items: center;
+  margin: 0 2em;
+}
+
+.grid-container > * {
+  max-width: 50ch;
 }
 
 @media only screen and (min-width: 45em) {
@@ -392,4 +399,17 @@ select {
   .grid-container > *:last-child {
     grid-column: 3;
   }
+  .grid-container--home {
+    padding-bottom: max(4rem, 20vh);
+    align-items: end;
+  }
+}
+
+/* ---------------------------- */
+/* home components */
+/* ---------------------------- */
+
+.home {
+  background-size: cover;
+  background-image: url(./assets/home/background-home-mobile.jpg);
 }
