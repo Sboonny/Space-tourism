@@ -21,6 +21,7 @@
     />
 
     <title>Frontend Mentor | Space tourism website</title>
+    <script src="script.js" defer></script>
   </head>
   <body class="home">
     <section>
@@ -33,8 +34,9 @@
           />
         </div>
         <button class='nav-toggle' aria-controls='primary-navigation'><span class="sr-only" aria-expanded='false'>Menu</span></button>
-        <div class="primary-navigation underline-indicators flex" id='primary-navigation'>
-          <nav>
+        <ul class="primary-navigation underline-indicators flex" data-visible="false" id='primary-navigation'>
+       
+        <nav>
             <li class="active">
               <a
                 herf="index.html"
@@ -70,7 +72,7 @@
               >
             </li>
           </nav>
-        </div>
+        </ul>
       </header>
     </section>
     <!-- page content -->
