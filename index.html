@@ -10,7 +10,7 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,14 +25,15 @@
   <body class="home">
     <section>
       <header class="flex" id="nav-holder">
-        <div>
+        <div >
           <img
             src="./assets/shared/logo.svg"
             alt="space tourism logo"
             id="logo"
           />
         </div>
-        <div class="primary-navigation underline-indicators flex">
+        <button class='nav-toggle' aria-controls='primary-navigation'><span class="sr-only" aria-expanded='false'>Menu</span></button>
+        <div class="primary-navigation underline-indicators flex" id='primary-navigation'>
           <nav>
             <li class="active">
               <a
