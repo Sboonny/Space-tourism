@@ -177,6 +177,22 @@ select {
   white-space: nowrap;
   border: 0;
 }
+.skip-to-content {
+ position: absolute;
+ background-color: hsl(var(--clr-white) / .1);
+ z-index: -1;
+ margin-inline: auto;
+ color: hsl(var(--clr-light)); 
+ text-decoration: none;
+ font-weight: 800;
+ transform: translateY(-100%);
+ padding: .5em 1em;
+ transition: transform 300ms ease-in-out;
+
+}
+.skip-to-content:focus {
+  transform: translateY(0);
+}
 
 /* colors */
 .bg-light {
