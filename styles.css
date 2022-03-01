@@ -462,7 +462,7 @@ body {
   display: grid;
   place-items: center;
   padding-inline: 1rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .grid-container * {
@@ -502,6 +502,16 @@ body {
   border-top: 1px solid hsl( var(--clr-white) / .1);
   padding-top: 2.5rem;
   margin-top: 2.5rem;
+}
+
+@media (min-width: 35em) {
+  .numbered.title {
+    justify-self: start;
+    margin-top: 2rem;
+  }
+  .destination-meta {
+    flex-direction: rows;
+  }
 }
 
 @media (min-width: 45em) {
