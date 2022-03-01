@@ -510,7 +510,8 @@ body {
     margin-top: 2rem;
   }
   .destination-meta {
-    flex-direction: rows;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
 
