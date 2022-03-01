@@ -68,10 +68,9 @@ you can change a value using style in html
 ```html
 <div class="box" styles="--gap: 5rem;">
 ```
-using clamp to calculate value for easier responsive sites
 ```css
 .proud-of-this-css {
-  padding: clamp(smallest, middle, largest);
+  color: papayawhip;
 }
 ```
 ```js
