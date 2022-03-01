@@ -125,12 +125,7 @@ textarea,
 select {
   font: inherit;
 }
-/* Remove marker and margins from lists */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -550,38 +545,4 @@ body {
 .underline-indicators > [aria-selected="true"] {
   color: hsl(var(--clr-white) / 1);
   border-color: hsl(var(--clr-white) / 1);
-}
-
-
-/* ---------------------------- */
-/* moon components              */
-/* ---------------------------- */
-.moon-primary {
-  background: url(./assets/destination/background-destination-mobile.jpg) no-repeat;
-  background-size: cover;
-  grid-template-rows: none;
-}
-
-.destination-title {
-  font-family: var(--ff-sans-cond);
-  font-size: var(--fs-500);
-  text-transform: uppercase;
-  letter-spacing: 4px; 
-}
-.large-moon {
-  width: 50%;
-  height: 100%;
-  margin-inline: 5rem;
-}
-.moon-distance-container {
-  flex-direction: column;
-}
-
-.moon-distance{
-  flex-direction: column;
-}
-
-hr {
-  width: 100%;
-  border: 1px solid hsl(var(--clr-light) / .5)
 }
