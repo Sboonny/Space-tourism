@@ -408,6 +408,9 @@ border: 0;
 .tab-list {
   --gap: 2rem;
 }
+.tab-list button {
+  background-color: transparent;
+}
 
 .dot-indicators > * {
   cursor: pointer;
@@ -475,8 +478,9 @@ body {
 
 /* destination layout */
 .destination {
-  background: url(./assets/destination/background-destination-mobile.jpg) no-repeat;
-  background-size: cover;
+  background-image: url(./assets/destination/background-destination-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; 
 }
 .grid-container--destination {
   --flow-space: 2rem;
@@ -519,7 +523,9 @@ body {
     justify-content: space-evenly;
   }
   .destination {
-    background: url(./assets/destination/background-destination-tablet.jpg) no-repeat;
+    background-image: url(./assets/destination/background-destination-tablet.jpg);
+    background-repeat: no-repeat;
+  background-size: cover; 
   }
 }
 
@@ -560,6 +566,8 @@ body {
     justify-content: start;
   }
   .destination {
-  background: url(./assets/destination/background-destination-desktop.jpg) no-repeat;  
+  background-image: url(./assets/destination/background-destination-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;  
   }
 }
