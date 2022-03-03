@@ -44,6 +44,12 @@ function changeTabPanel(event) {
   const tabContainer = targetedTab.parentNode;
   const mainContainer = tabContainer.parentNode;
 
+  tabContainer
+    .querySelector('[aria-selected="true"]')
+    .setAttribute("aria-selected", false);
+
+  targetedTab.setAttribute("aria-selected", true);
+
   mainContainer
     .querySelectorAll("[role='tabpanel']")
     .forEach((panel) => panel.setAttribute("hidden", true));
