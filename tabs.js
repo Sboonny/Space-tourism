@@ -42,5 +42,10 @@ function changeTabPanel(event) {
   //as parent-as a rule-
   const tabContainer = targetedTab.parentNode;
   const mainContainer = tabContainer.parentNode;
+
+  mainContainer
+    .querySelectorAll("article")
+    .forEach((article) => article.setAttribute("hidden"), true);
+
   mainContainer.querySelector([`#${tabPanel}`]).removeAttribute("hidden");
 }
