@@ -59,15 +59,15 @@
   </picture>
 
     <div class="tab-list underline-indicators flex" role='tablist' aria-label='destination list'>
-        <button aria-selected="true"  role="tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex='0'>Moon</button>
-        <button aria-selected="false" role="tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex='-1'>Mars</button>
-        <button aria-selected="false" role="tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex='-1'>Europa</button>
-        <button aria-selected="false" role="tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex='-1'>Titan</button>
+        <button aria-selected="true"  role="tab" aria-controls='moon-tab' class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex='0'>Moon</button>
+        <button aria-selected="false" role="tab" aria-controls='mars-tab' class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex='-1'>Mars</button>
+        <button aria-selected="false" role="tab" aria-controls='europa-tab' class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex='-1'>Europa</button>
+        <button aria-selected="false" role="tab" aria-controls='titan-tab' class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex='-1'>Titan</button>
     </div>
  
     <!-- moon content -->
     <article class="destination-info flow">
-      <h2 class="fs-800 uppercase ff-serif">Moon</h2>
+      <h2 class="fs-800 uppercase ff-serif" id='moon-tab'>Moon</h2>
 
       <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
       regain perspective and come back refreshed. While you’re there, take in some history 
@@ -89,7 +89,7 @@
     
     <!-- Mars content -->
     <article class="destination-info flow" hidden>
-      <h2 class="fs-800 uppercase ff-serif">Mars</h2>
+      <h2 class="fs-800 uppercase ff-serif" id='mars-tab'>Mars</h2>
       
       <p>Don’t forget to pack your hiking boots. You’ll need
         them to tackle Olympus Mons, the tallest planetary mountain in our solar
@@ -110,7 +110,7 @@
     
     <!-- Europa content -->
     <article class="destination-info flow" hidden>
-      <h2 class="fs-800 uppercase ff-serif">Europa</h2>
+      <h2 class="fs-800 uppercase ff-serif" id='europa-tab'>Europa</h2>
       
       <p>The smallest of the four Galilean moons orbiting
         Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect
@@ -132,7 +132,7 @@
 
     <!-- Titan content -->
     <article class="destination-info flow" hidden>
-      <h2 class="fs-800 uppercase ff-serif">Titan</h2>
+      <h2 class="fs-800 uppercase ff-serif" id='titan-tab'>Titan</h2>
 
       <p>Titan The only moon known to have a dense atmosphere other
         than Earth, Titan is a home away from home (just a few hundred degrees
