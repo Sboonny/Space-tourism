@@ -72,6 +72,11 @@ hr {
   border: 1px solid white;
 }
 ```
+pick a parent whatever its, instead of query. this way makes it possible to use the code, without it having a main as parent 
+```js
+  const tabContainer = targetedTab.parentNode;
+  const mainContainer = tabContainer.parentNode
+  ```
 **the importance of commiting regularly**
 ____
 
