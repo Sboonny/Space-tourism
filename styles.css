@@ -89,7 +89,7 @@ body {
   background-color: hsl(var(--clr-dark));
   line-height: 1.5;
   min-height: 100vh;
-
+  scrollbar-gutter: stable;
   display: grid;
   grid-template-rows: min-content 1fr;
 
@@ -528,6 +528,7 @@ body {
 .grid-container--destination > picture {
   grid-area: image;
   max-width: 60%;
+  align-self: start;
 }
 
 .grid-container--destination > .tab-list {
@@ -658,21 +659,25 @@ body {
     background-size: cover;
   }
   .grid-container--crew {
-    justify-items: baseline;
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 35rem) minmax(0, 25rem) minmax(
+        1rem,
+        1fr
+      );
+    justify-items: start;
     grid-template-areas:
-      ". title image image"
-      ". content image image"
-      ". tabs image image";
+      ". title title ."
+      ". content image ."
+      ". tabs image .";
   }
   .grid-container--crew > .dot-indicators {
     justify-self: start;
   }
   .grid-container--crew > picture {
+    grid-column: span 2;
     align-self: end;
-    padding-left: 5rem;
+    transform: scale(1.2);
   }
 }
-
 
 [role="tab"]:focus {
   color: limegreen;
