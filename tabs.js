@@ -33,7 +33,14 @@ function changeTabFocus(event) {
   tabs[focusedTab].focus();
 }
 
-function changeTabPanel (event) {
+function changeTabPanel(event) {
   const targetedTab = event.target;
-  const tabPanel = targetedTab.getAttribute()
+  const tabPanel = targetedTab.getAttribute("aria-controls");
+  //pick a parent whatever its
+  //make it possible to use the
+  //code without it having main
+  //as parent-as a rule-
+  const tabContainer = targetedTab.parentNode;
+  const mainContainer = tabContainer.parentNode;
+  mainContainer.querySelector([`#${tabPanel}`]).removeAttribute("hidden");
 }
