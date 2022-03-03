@@ -146,7 +146,9 @@ select {
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
 }
-
+.flow-space--small {
+  --flow-space: 0.75rem;
+}
 .container {
   padding-inline: 2em;
   margin-inline: auto;
@@ -423,7 +425,7 @@ select {
 
 .underline-indicators > * {
   cursor: pointer;
-  padding: var(--underline-gap, 1rem) 0;
+  padding: var(--underline-gap, 0.5rem) 0;
   border: 0;
   border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
 }
@@ -523,7 +525,7 @@ body {
     "content";
 }
 
-.grid-container--destination > img {
+.grid-container--destination > picture {
   grid-area: image;
   max-width: 60%;
 }
@@ -552,6 +554,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.crew-info h2 {
+  color: hsl(var(--clr-white) / 0.5);
+}
 .grid-container--crew {
   --flow-space: 2rem;
   grid-template-areas:
@@ -560,7 +566,7 @@ body {
     "tabs"
     "content";
 }
-.grid-container--crew > img {
+.grid-container--crew > picture {
   grid-area: image;
   max-width: 60%;
   border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
@@ -633,7 +639,7 @@ body {
       ". image tabs ."
       ". image content .";
   }
-  .grid-container--destination > img {
+  .grid-container--destination > picture {
     max-width: 90%;
   }
   .destination-meta {
@@ -661,7 +667,7 @@ body {
   .grid-container--crew > .dot-indicators {
     justify-self: start;
   }
-  .grid-container--crew > img {
+  .grid-container--crew > picture {
     align-self: end;
     padding-left: 5rem;
   }
