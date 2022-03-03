@@ -14,23 +14,22 @@ function changeTabFocus(event) {
 
   if (event.keyCode === keydownRight || event.keyCode === keydownLeft) {
     tabs[focusedTab].setAttribute("tabindex", -1);
+    
+      if (event.keyCode === keydownRight) {
+        focusedTab++;
+        if (focusedTab >= tabs.length) {
+          focusedTab = 0;
+        }
+      } else if (event.keyCode === keydownLeft) {
+        focusedTab--;
+        if (focusedTab < 0) {
+          focusedTab = tabs.length - 1;
+        }
+      }
+    
+      tabs[focusedTab].setAttribute("tabindex", 0);
+      tabs[focusedTab].focus();
   }
-
-  if (event.keyCode === keydownRight) {
-    focusedTab++;
-    if (focusedTab >= tabs.length) {
-      focusedTab = 0;
-    }
-  }
-  if (event.keyCode === keydownLeft) {
-    focusedTab--;
-    if (focusedTab < 0) {
-      focusedTab = tabs.length - 1;
-    }
-  }
-
-  tabs[focusedTab].setAttribute("tabindex", 0);
-  tabs[focusedTab].focus();
 }
 
 function changeTabPanel(event) {
@@ -44,7 +43,7 @@ function changeTabPanel(event) {
   const tabContainer = targetedTab.parentNode;
   const mainContainer = tabContainer.parentNode;
 
-  changeTab(tabContainer, targetedTab);
+  changeTabSelector(tabContainer, targetedTab);
 
   hideContent(mainContainer, "[role='tabpanel']");
   hideContent(mainContainer, "picture");
@@ -63,7 +62,7 @@ function showContent(parent, child) {
   parent.querySelector([child]).removeAttribute("hidden");
 }
 
-function changeTab(parent, child) {
+function changeTabSelector(parent, child) {
   parent
     .querySelector('[aria-selected="true"]')
     .setAttribute("aria-selected", false);
