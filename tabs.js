@@ -44,21 +44,29 @@ function changeTabPanel(event) {
   const tabContainer = targetedTab.parentNode;
   const mainContainer = tabContainer.parentNode;
 
-  tabContainer
+  changeTab(tabContainer, targetedTab);
+
+  hideContent(mainContainer, "[role='tabpanel']");
+  hideContent(mainContainer, "picture");
+
+  showContent(mainContainer, [`#${tabPanel}`]);
+  showContent(mainContainer, [`#${tabpicture}`]);
+}
+
+function hideContent(parent, child) {
+  parent
+    .querySelectorAll(child)
+    .forEach((panel) => panel.setAttribute("hidden", true));
+}
+
+function showContent(parent, child) {
+  parent.querySelector([child]).removeAttribute("hidden");
+}
+
+function changeTab(parent, child) {
+  parent
     .querySelector('[aria-selected="true"]')
     .setAttribute("aria-selected", false);
 
-  targetedTab.setAttribute("aria-selected", true);
-
-  mainContainer
-    .querySelectorAll("[role='tabpanel']")
-    .forEach((panel) => panel.setAttribute("hidden", true));
-
-  mainContainer.querySelector([`#${tabPanel}`]).removeAttribute("hidden");
-
-  mainContainer
-    .querySelectorAll("picture")
-    .forEach((picture) => picture.setAttribute("hidden", true));
-
-  mainContainer.querySelector([`#${tabpicture}`]).removeAttribute("hidden");
+  child.setAttribute("aria-selected", true);
 }
