@@ -672,3 +672,8 @@ body {
     padding-left: 5rem;
   }
 }
+
+
+[role="tab"]:focus {
+  color: limegreen;
+}
