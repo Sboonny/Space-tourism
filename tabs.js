@@ -36,6 +36,7 @@ function changeTabFocus(event) {
 function changeTabPanel(event) {
   const targetedTab = event.target;
   const tabPanel = targetedTab.getAttribute("aria-controls");
+  const tabpicture = targetedTab.getAttribute("data-image");
   //pick a parent whatever its
   //make it possible to use the
   //code without it having main
@@ -48,4 +49,10 @@ function changeTabPanel(event) {
     .forEach((panel) => panel.setAttribute("hidden", true));
 
   mainContainer.querySelector([`#${tabPanel}`]).removeAttribute("hidden");
+
+  mainContainer
+    .querySelectorAll("picture")
+    .forEach((picture) => picture.setAttribute("hidden", true));
+
+  mainContainer.querySelector([`#${tabpicture}`]).removeAttribute("hidden");
 }
