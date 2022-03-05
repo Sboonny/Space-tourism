@@ -291,6 +291,16 @@ select {
   text-decoration: none;
 }
 
+.tech-button {
+  font-size: 2rem;
+  display: inline-grid;
+  place-items: center;
+  padding: 0 2em;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  text-decoration: none;
+}
+
 .large-button::after {
   content: "";
   position: absolute;
@@ -677,8 +687,4 @@ body {
     align-self: end;
     transform: scale(1.2);
   }
-}
-
-[role="tab"]:focus {
-  color: limegreen;
 }
