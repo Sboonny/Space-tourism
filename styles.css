@@ -291,16 +291,6 @@ select {
   text-decoration: none;
 }
 
-.tech-button {
-  font-size: 2rem;
-  display: inline-grid;
-  place-items: center;
-  padding: 0 2em;
-  border-radius: 50%;
-  aspect-ratio: 1;
-  text-decoration: none;
-}
-
 .large-button::after {
   content: "";
   position: absolute;
@@ -591,11 +581,60 @@ body {
   grid-area: content;
 }
 
+/* tech layout */
+.technology {
+  background-image: url(./assets/technology/background-technology-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.tech-button {
+  background-color: transparent;
+  font-size: 1.15rem;
+  display: inline-grid;
+  place-items: center;
+  padding: 0 0.85em;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  text-decoration: none;
+  font-weight: 400;
+  color: hsl(var(--clr-white) / 0.4);
+  border: 1px solid hsl(var(--clr-white) / 0.4);
+}
+.tech-button[aria-selected="true"] {
+  color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-white) / 0.9);
+}
+.technology-info h2 {
+  color: hsl(var(--clr-white) / 0.5);
+}
+
+.grid-container--technology {
+  --flow-space: 2rem;
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content"
+    "content";
+}
+
+.grid-container--technology > picture {
+  margin-inline: -0.75rem;
+  grid-area: image;
+}
+.grid-container--technology .technology-list {
+  grid-area: tabs;
+}
+.grid-container--technology .technology-info {
+  grid-area: content;
+}
 @media (min-width: 35em) {
   .numbered.title {
     justify-self: start;
     margin-top: 2rem;
   }
+  /* destination layout */
+
   .destination-meta {
     flex-direction: row;
     justify-content: space-evenly;
@@ -605,6 +644,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  /* crew layout */
+
   .crew {
     background-image: url(./assets/crew/background-crew-tablet.jpg);
     background-repeat: no-repeat;
@@ -617,6 +659,25 @@ body {
       "content"
       "tabs"
       "image";
+  }
+
+  /* tech layout */
+  .grid-container--technology {
+    grid-template-areas:
+      "title"
+      "image"
+      "tabs"
+      "content";
+  }
+  .tech-button {
+    font-size: 1.5rem;
+    padding: 0 1.2em;
+  }
+  .grid-container--technology > h1 {
+    justify-self: start;
+  }
+  .technology {
+    background-image: url(./assets/technology/background-technology-tablet.jpg);
   }
 }
 
@@ -642,6 +703,9 @@ body {
     padding-bottom: max(6rem, 20vh);
     align-items: end;
   }
+
+  /* destination layout */
+
   .grid-container--destination {
     justify-items: start;
     align-items: start;
@@ -663,6 +727,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
+  /* crew layout */
+
   .crew {
     background-image: url(./assets/crew/background-crew-desktop.jpg);
     background-repeat: no-repeat;
@@ -686,5 +752,33 @@ body {
     grid-column: span 2;
     align-self: end;
     transform: scale(1.2);
+  }
+  /* tech layout */
+  .technology {
+    background-image: url(./assets/technology/background-technology-desktop.jpg);
+  }
+  .grid-container--technology {
+    justify-self: spa;
+    grid-template-columns: minmax(5rem, 10rem) minmax(0, 50rem) minmax(0, 15rem) minmax(
+        0,
+        50
+      );
+    grid-template-areas:
+      "title title .  ."
+      "tabs content .  image"
+      "tabs content .  image ";
+  }
+  .grid-container--technology .technology-list {
+    flex-direction: column;
+  }
+  .gird-container--tech .numbered-title {
+  }
+  .tech-button {
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  .grid-container--technology > picture {
+    grid-column: span 2;
+    justify-self: end;
   }
 }
