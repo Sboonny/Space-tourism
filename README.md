@@ -33,11 +33,10 @@ Users should be able to:
 
 ![](.\assets\space-tourism-desktop\home-desktop.jpeg)
 
-
 ### Links
 
-- Solution URL: [github/space-tourism](https://github.com/Sboonny/Space-tourism)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Front End mentor Solution URL: [click here](https://www.frontendmentor.io/solutions/space-tourism-html-css-js-Vh30W56YC)
+- Live Site URL: [click here](https://space-tourism-sboonny.netlify.app/)
 
 ---
 
@@ -118,7 +117,7 @@ creating my own reset and snipit changing button color to gradient and remove th
 
 ## Acknowledgments
 
-I would love to acknowledge because I wouldn't have tried to beat imposter syndrom without them:
+they made learning css and coding in general fun
 
 - [Kevin Powell](https://www.kevinpowell.co/)
 - [FreeCodeCamp](https://www.freecodecamp.org/)
