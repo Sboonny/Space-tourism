@@ -622,6 +622,9 @@ body {
   margin-inline: -0.75rem;
   grid-area: image;
 }
+.spaceport-img {
+  background-image: url(".\assets\technology\image-spaceport-portrait.jpg");
+}
 .grid-container--technology .technology-list {
   grid-area: tabs;
 }
