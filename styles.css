@@ -97,17 +97,12 @@ body {
 }
 
 /* make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
+picture img {
+  width: 100%
 }
 
 /* make form elements easier to work with */
-input,
-button,
-textarea,
-select {
+button {
   font: inherit;
 }
 
@@ -446,6 +441,8 @@ select {
 }
 .tab-list button {
   background-color: transparent;
+  border: 0;
+  cursor: pointer;
 }
 
 .dot-indicators > * {
@@ -599,7 +596,15 @@ body {
   font-weight: 400;
   color: hsl(var(--clr-white) / 0.4);
   border: 1px solid hsl(var(--clr-white) / 0.4);
+  cursor: pointer;
 }
+
+.tech-button:hover,
+.tech-button:focus {
+  background-color: hsl(var(--clr-white) / 0.1);
+}
+
+
 .tech-button[aria-selected="true"] {
   color: hsl(var(--clr-dark));
   background-color: hsl(var(--clr-white) / 0.9);
@@ -717,7 +722,7 @@ body {
       ". image tabs ."
       ". image content .";
   }
-  .grid-container--destination > picture {
+  .grid-container--destination  picture {
     max-width: 90%;
   }
   .destination-meta {
