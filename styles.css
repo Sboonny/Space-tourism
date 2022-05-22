@@ -782,8 +782,7 @@ body {
   .grid-container--technology .technology-list {
     flex-direction: column;
   }
-  .gird-container--tech .numbered-title {
-  }
+
   .tech-button {
     font-size: 1.5rem;
     text-decoration: none;
