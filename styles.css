@@ -423,15 +423,15 @@ select {
   }
 }
 
-.underline-indicators > * {
+.underline-indicators li a {
   cursor: pointer;
   padding: var(--underline-gap, 0.5rem) 0;
   border: 0;
   border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
 }
 
-.underline-indicators > *:hover,
-.underline-indicators > *:focus {
+.underline-indicators > li a:hover,
+.underline-indicators > li a:focus {
   border-color: hsl(var(--clr-white) / 0.5);
 }
 
