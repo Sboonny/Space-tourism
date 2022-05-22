@@ -98,6 +98,7 @@ body {
 
 /* make images easier to work with */
 picture img {
+  height: 100%;
   width: 100%
 }
 
@@ -307,6 +308,8 @@ button {
 /* primary-header */
 
 .logo {
+  height: auto;
+  width: auto;
   margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
 }
 
